@@ -28,8 +28,7 @@ class Animal
         $this->live();
         if ($this->age > 10 || $this->limbsNumber <= 1){
             return false;
-        }
-        else{
+        } else {
             $this->run();
             return true;
         }
@@ -46,7 +45,7 @@ class Snake extends Animal
     public function run()
     {
         echo "<hr>Snake::run()<br>";
-        parent::live();
+        $this->live();
         $this->snake();
     }
 
@@ -63,5 +62,4 @@ class Robot extends Animal
         echo "<hr>Robot::live()<br>";
         echo "killAllHumans<br>";
     }
-
 }
