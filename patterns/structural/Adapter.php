@@ -12,6 +12,7 @@ class AfricanLion implements Lion
 {
     public function roar()
     {
+        echo "AfricanLion";
     }
 }
 
@@ -19,6 +20,7 @@ class AsianLion implements Lion
 {
     public function roar()
     {
+        echo "AsianLion";
     }
 }
 
@@ -27,6 +29,7 @@ class Hunter
 {
     public function hunt(Lion $lion)
     {
+        $lion->roar();
     }
 }
 
@@ -36,6 +39,7 @@ class WildDog
 {
     public function bark()
     {
+        echo "Wild dog";
     }
 }
 
@@ -61,3 +65,6 @@ $wildDogAdapter = new WildDogAdapter($wildDog);
 
 $hunter = new Hunter();
 $hunter->hunt($wildDogAdapter);
+
+$lion = new AfricanLion();
+$hunter->hunt($lion);
